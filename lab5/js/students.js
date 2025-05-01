@@ -52,7 +52,12 @@ function reRender(stud_list = student_list, force = false) {
   let stud_data = "";
 
   stud_list.forEach((stud, index) => {
-    stud_data += `<tr>
+    if (stud.stud_grade < 60) {
+      bg_color = "red";
+    } else {
+      bg_color = "green";
+    }
+    stud_data += `<tr style="background-color: ${bg_color}">
     <td>${stud.stud_name}</td>
     <td>${stud.stud_grade}</td>
     <td>

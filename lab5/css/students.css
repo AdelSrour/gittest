@@ -22,7 +22,7 @@ body {
 }
 
 .delbtn {
-  color: red;
+  color: rgb(218, 218, 218);
   cursor: pointer;
 }
 
@@ -32,4 +32,9 @@ body {
   background-color: red;
   color: #fff;
   margin: 20px 0;
+}
+
+#student-table {
+  min-width: 60%;
+  text-align: center;
 }
