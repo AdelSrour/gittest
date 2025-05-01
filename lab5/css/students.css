@@ -1,0 +1,35 @@
+body {
+  font-size: 18px;
+  background-color: rgb(179, 177, 177);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.student-panel {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+#stud_btn {
+  font-size: 1.1rem;
+}
+
+.student-action {
+  margin-bottom: 20px;
+}
+
+.delbtn {
+  color: red;
+  cursor: pointer;
+}
+
+.errorMsg {
+  display: none;
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+  margin: 20px 0;
+}

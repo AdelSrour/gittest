@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/students.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="student-panel">
+        <div class="errorMsg" id="errorPanel"></div>
+        <form action="#" onsubmit="addStud(event)">
+          <table>
+            <tr>
+              <td>Department</td>
+              <td>
+                <input
+                  type="radio"
+                  name="stud_dep"
+                  id="SD"
+                  value="SD"
+                  checked
+                />
+                <label for="SD">SD</label>
+
+                <input type="radio" name="stud_dep" id="OS" value="OS" />
+                <label for="OS">OS</label>
+
+                <input type="radio" name="stud_dep" id="EL" value="EL" />
+                <label for="EL">EL</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Student Name</td>
+              <td>
+                <input type="text" id="stud_name" placeholder="Mona" />
+              </td>
+            </tr>
+            <tr>
+              <td>Student Grade</td>
+              <td>
+                <input
+                  type="text"
+                  id="stud_grade"
+                  placeholder="50"
+                  onkeydown="validateGrade(event)"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="stud_btn" type="submit">Add</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <div class="student-list">
+        <div class="student-action">
+          <label for="sortBtn">Sort</label>
+          <select name="sortBtn" id="sortBtn" onchange="studSort();">
+            <option value="name">Name</option>
+            <option value="grade">Grade</option>
+          </select>
+          <br />
+          <label for="filterBtn">Filter</label>
+          <select name="filterBtn" id="filterBtn" onchange="filter();">
+            <option value="all">All</option>
+            <option value="failed">Failed</option>
+            <option value="success">Success</option>
+          </select>
+        </div>
+        <table id="student-table" border="1"></table>
+      </div>
+    </div>
+    <script src="./js/students.js"></script>
+  </body>
+</html>

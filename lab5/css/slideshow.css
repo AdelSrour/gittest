@@ -1,0 +1,13 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.image-holder {
+  margin-top: 20px;
+}
+
+.image-holder img {
+  max-width: 100%;
+  border-radius: 20px;
+}
